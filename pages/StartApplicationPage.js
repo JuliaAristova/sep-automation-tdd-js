@@ -1,7 +1,7 @@
 import { BasePage } from "./BasePage";
 
 export class StartApplicationPage extends BasePage {
-  
+
   /** @type {import('@playwright/test').Locator} */
   startApplicationText = this.locator("(//div[@class = 'step-title'])[1]");
 
@@ -34,6 +34,9 @@ export class StartApplicationPage extends BasePage {
 
   /** @type {import('@playwright/test').Locator} */
   howDidYouHearAboutUsDropDown = this.locator("//mat-label[text()='How did you hear about us?']");
+
+  /** @type {import('@playwright/test').Locator} */
+  dropdownOptions = this.locator("//div[@role='listbox']/mat-option[@role='option']");
 
   /** @type {import('@playwright/test').Locator} */
   emailOptionFromDropDown = this.locator("//mat-option/span[contains(text(), 'Email')]");
@@ -87,7 +90,7 @@ export class StartApplicationPage extends BasePage {
   programPrice = this.locator("//div[@class='col-sm']/b[@class = 'info-primary']");
 
   /** @type {import('@playwright/test').Locator} */
-  footer = this.locator("//p[@class = 'footer-text' and contains(text(), 'Need help?')]");
+  footer = this.locator("(//p[@class = 'footer-text' and contains(text(), 'Need help?')])[1]");
 
   /** @type {import('@playwright/test').Locator} */
   nextButton = this.locator("//button[@class = 'next-button'][contains(text(), 'Next')]");
