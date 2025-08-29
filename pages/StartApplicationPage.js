@@ -36,6 +36,9 @@ export class StartApplicationPage extends BasePage {
   howDidYouHearAboutUsDropDown = this.locator("//mat-label[text()='How did you hear about us?']");
 
   /** @type {import('@playwright/test').Locator} */
+  dropdownOptions = this.locator("//div[@role='listbox']/mat-option[@role='option']");
+
+  /** @type {import('@playwright/test').Locator} */
   emailOptionFromDropDown = this.locator("//mat-option/span[contains(text(), 'Email')]");
 
   /** @type {import('@playwright/test').Locator} */
