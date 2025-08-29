@@ -14,4 +14,6 @@ export class LeftMainPage extends BasePage {
   /** @type {import('@playwright/test').Locator} */
   programName = this.locator("//p[@class='course-name']/a");
 
+  /** @type {import('@playwright/test').Locator} */
+  footerLinks = this.locator("//div[@class='details-footer ng-star-inserted']/a");
 }
